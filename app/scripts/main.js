@@ -15,3 +15,9 @@ var btnShuffle = document.querySelector('.btn-shuffle');
 btnShuffle.addEventListener('click', function() {
   btnShuffle.classList.toggle('is-shuffled');
 });
+
+var btnLoop = document.querySelector('.btn-loop');
+
+btnLoop.addEventListener('click', function() {
+  btnLoop.classList.toggle('is-looped');
+});

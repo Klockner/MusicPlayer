@@ -223,23 +223,79 @@ button {
 }
 
 .btn-shuffle {
+  // Position
+  position: relative;
+
   // Visual
   background-image: url('/icons/shuffle-button.png');
   background-repeat: no-repeat;
   background-size: contain;
+  transition: all 0.3s;
+
+  &:after {
+    // Position
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+
+    // Box Model
+    border-radius: 50%;
+    width: 5px;
+    margin-left: -2.5px;
+    height: 5px;
+
+    // Visual
+    background-color: transparent;
+    content: '';
+    transition: all 0.3s;
+    pointer-events: none;
+  }
 
   &.is-shuffled {
-    background-image: url('/icons/suffle-option.png');
+    background-image: url('/icons/shuffle-button-active.png');
+
+    &:after {
+      background-color: #1a9b79;
+    }
   }
 }
 
 .btn-loop {
   // Position
+  position: relative;
+
+  // Box Model
   margin-left: 5px;
 
   // Visual
   background: url('/icons/repeat.png') no-repeat;
   background-size: contain;
+
+  &:after {
+    // Position
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+
+    // Box Model
+    border-radius: 50%;
+    width: 5px;
+    margin-left: -2.5px;
+    height: 5px;
+
+    // Visual
+    background-color: transparent;
+    content: '';
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  &.is-looped {
+
+    &:after {
+      background-color: #1a9b79;
+    }
+  }
 }
 
 .player-footer {
