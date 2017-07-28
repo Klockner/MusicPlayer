@@ -1,6 +1,8 @@
 // bower:scss
 // endbower
 
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +44,8 @@ body {
 .player {
   height: 300px;
   width: 420px;
+  font-family: 'Audiowide', serif;
+  color: rgb(158, 158, 158);
 
   position: absolute;
   top:0;
@@ -61,7 +65,7 @@ body {
   .player-body {
     height: 90%;
     border-radius: 6px 6px 0px 0px;
-    background-color: rgb(174, 238, 117);
+    background-color: rgb(25, 201, 181);
 
     .player-top-icons {
       height: 10%;
@@ -87,8 +91,9 @@ body {
       height: 90%;
 
       .player-music-buttons {
-        height: 80%;
         text-align: center;
+        padding-top: 34%;
+        padding-bottom: 10px;
 
         .btn-action {
           height: 30px;
@@ -118,22 +123,39 @@ body {
       }
 
       .player-bar {
-        height: 20%;
+        width: 100%;
 
         .player-time {
+          padding-left: 20px;
 
+          font-size: 14px;
+          color: #FFF;
         }
 
         .player-progress-bar {
-          .player-progress {
+          position: absolute;
+          background-color: rgb(173, 245, 234);
+          height: 5px;
+          width: 65%;
 
+          margin-top: 8px;
+          margin-left: 12px;
+
+          border-radius: 5px;
+
+          .player-progress {
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            background-color: #FFF;
+            border-radius: 5px;
           }
         }
 
         .player-bar-buttons {
           float: right;
-          width: 15%;
-          padding-right: 5px;
+          padding-right: 20px;
+          line-height: 0px;
 
           .btn-shuffle {
             background: url('/icons/shuffle-button.png') no-repeat;
@@ -143,7 +165,7 @@ body {
           .btn-loop {
             background: url('/icons/repeat.png') no-repeat;
             background-size: contain;
-            margin-left: 10px;
+            margin-left: 5px;
           }
         }
       }
@@ -160,24 +182,26 @@ body {
 
     .player-info {
       float: left;
-      width: 80%;
+      max-width: 75%;
       display: inline-block;
 
-      color: rgb(158, 158, 158);
+      padding: 15px;
+      padding-left: 20px;
+      line-height: 25px;
 
       .player-title {
-
+        font-size: 18px;
       }
 
       .player-artist {
-
+        font-size: 14px;
       }
     }
 
     .player-social-icons {
       float: right;
-      width: 15%;
-      padding-right: 5px;
+      padding-right: 20px;
+      padding-top: 25px;
 
       .btn-heart {
         background: url('/icons/heart.png') no-repeat;
