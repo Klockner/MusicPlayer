@@ -100,6 +100,10 @@ button {
 .btn-sound {
   // Visual
   background-image: url('/icons/speaker.png');
+
+  &.is-muted {
+    background-image: url('/icons/mute.png');
+  }
 }
 
 .btn-volume {
@@ -129,16 +133,35 @@ button {
   cursor: pointer;
 }
 
+.btn-press {
+  transition: all .4s ease-out;
+  transform: scale(1);
+  transform: scale3d(1, 1, 1);
+
+  &:active {
+    // Visual
+    transform: scale(0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+}
+
 .btn-backward {
   // Visual
-  background: url('/icons/backward-icon.png') no-repeat;
+  background-image: url('/icons/backward-icon.png');
+  background-repeat: no-repeat;
   background-size: contain;
 }
 
 .btn-play {
   // Visual
-  background: url('/icons/play-button.png') no-repeat;
+  background-image: url('/icons/play-button.png');
+  background-repeat: no-repeat;
   background-size: contain;
+  transition: all .1s ease-out;
+
+  &.is-paused {
+    background-image: url('/icons/pause.png');
+  }
 }
 
 .btn-forward {
@@ -201,8 +224,13 @@ button {
 
 .btn-shuffle {
   // Visual
-  background: url('/icons/shuffle-button.png') no-repeat;
+  background-image: url('/icons/shuffle-button.png');
+  background-repeat: no-repeat;
   background-size: contain;
+
+  &.is-shuffled {
+    background-image: url('/icons/suffle-option.png');
+  }
 }
 
 .btn-loop {
