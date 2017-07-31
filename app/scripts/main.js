@@ -69,8 +69,8 @@ btnBackward.addEventListener('click', function() {
 });
 
 function getRandomColor() {
-  var colors = ['#7d4627', '#173e43', '#3fb0ac', '#e62739', '#6ed3cf',
-    '#22264b', '#dbc3d0', '#e05038', '#300032', '#cdd422'];
+  var colors = ['#7d4627', '#5BB12F', '#3fb0ac', '#e62739', '#6ed3cf',
+    '#B1EB00', '#5e0231', '#6534ff', '#982395', '#FF85CB'];
 
     var color_idx = Math.floor(Math.random() * colors.length);
     return colors[color_idx];
