@@ -134,7 +134,7 @@ button {
 }
 
 .btn-press {
-  transition: all .4s ease-out;
+  transition: all .5s ease-out;
   transform: scale(1);
   transform: scale3d(1, 1, 1);
 
@@ -166,7 +166,8 @@ button {
 
 .btn-forward {
   // Visual
-  background: url('/icons/fast-forward-icon.png') no-repeat;
+  background-image: url('/icons/fast-forward-icon.png');
+  background-repeat: no-repeat;
   background-size: contain;
 }
 
@@ -198,7 +199,7 @@ button {
   border-radius: 5px;
 
   // Visual
-  background-color: rgb(186, 186, 181);
+  background-color: rgb(204, 204, 204);
 }
 
 .player-progress {
@@ -252,10 +253,8 @@ button {
   }
 
   &.is-shuffled {
-    background-image: url('/icons/shuffle-button-active.png');
-
     &:after {
-      background-color: #1a9b79;
+      background-color: #FFF;
     }
   }
 }
@@ -268,7 +267,8 @@ button {
   margin-left: 5px;
 
   // Visual
-  background: url('/icons/repeat.png') no-repeat;
+  background-image: url('/icons/repeat.png');
+  background-repeat: no-repeat;
   background-size: contain;
 
   &:after {
@@ -293,7 +293,7 @@ button {
   &.is-looped {
 
     &:after {
-      background-color: #1a9b79;
+      background-color: #FFF;
     }
   }
 }
@@ -329,8 +329,14 @@ button {
 
 .btn-heart {
   // Visual
-  background: url('/icons/heart.png') no-repeat;
+  background-image: url('/icons/heart.png');
+  background-repeat: no-repeat;
   background-size: contain;
+
+  &.is-hearted {
+    // Visual
+    background-image: url('/icons/like.png');
+  }
 }
 
 .btn-share {
@@ -338,6 +344,7 @@ button {
   margin-left: 10px;
 
   // Visual
-  background: url('/icons/share.png') no-repeat;
+  background-image: url('/icons/share.png');
+  background-repeat: no-repeat;
   background-size: contain;
 }
